@@ -50,7 +50,7 @@ def gcd_array(input, order='all'):
 
     # Only integer values are allowed
     # if input.dtype.name != 'int64':
-    if not np.issubdtype(input.dtype, np.int):
+    if not np.issubdtype(input.dtype, np.integer):
         raise Exception("Inputs must be real integers.")
 
     err_msg = "Not a valid input. Please choose either \"rows\" " + \
