@@ -738,7 +738,7 @@ def mat2quat(mat, rot_type='proper'):
     q3 = ax_ang[2, :]*np.sin(ax_ang[3, :]/2)
     qtype = ax_ang[4, :]
 
-    return quat.Quaternion(q0, q1, q2, q3, qtype)
+    return quat.Quaternion(np.array([q0, q1, q2, q3, qtype]))
 # -----------------------------------------------------------------------------------------------------------
 
 
@@ -789,7 +789,7 @@ def axang2quat(ax_ang):
     q3 = z*s
 
     qtype = ax_ang[4, :]
-    return quat.Quaternion(q0, q1, q2, q3, qtype)
+    return quat.Quaternion(np.array([q0, q1, q2, q3, qtype]))
 # -----------------------------------------------------------------------------------------------------------
 
 # mats = np.zeros((20, 3, 3))
