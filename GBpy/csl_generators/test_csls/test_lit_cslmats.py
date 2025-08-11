@@ -235,7 +235,7 @@ def compare_sig_rots(sig_rots_m1, sig_rots_p, l1):
                                 if (tcheck == 0):
                                         raise Exception('No Good')
                                 else:
-                                        print 'matp1 exists in mat_m'
+                                        print('matp1 exists in mat_m')
 
                 elif rot_nm.ndim == 2:
                         tn1 = rot_np[0, :, :]
@@ -254,7 +254,7 @@ def compare_sig_rots(sig_rots_m1, sig_rots_p, l1):
 
                         # if mat_ops.eq(mat_m, matp2, 1e-10):
                         if quat.eq(disquat_p2, disquat_m, 1e-10):
-                                print 'matp1 exists in mat_m'
+                                print('matp1 exists in mat_m')
                         else:
                                 raise Exception('No Good')
                 else:
@@ -296,7 +296,7 @@ def test_lit_specific_cslmats(elem_type, sig_type):
         sig_rots = pickle.load(jar1)
 
         for ct1 in sig_rots.keys():
-                print ct1
+                print(ct1)
                 csl_rots = sig_rots[ct1]
                 l1 = csl_rots['lattice']
                 sig_rots_m1 = compute_sig_rots(csl_rots, l1, sig_type)
