@@ -355,8 +355,8 @@ class Quaternion(np.ndarray):
         #
         ##############################################################
 
-    def __init__(self, *args, **kwargs):
-        super(Quaternion, self).__init__(*args, **kwargs)
+#    def __init__(self, *args, **kwargs):
+#        super(Quaternion, self).__init__(*args, **kwargs)
 
     # def __str__(q):
     #     # super(Quaternion, q).__str__()
