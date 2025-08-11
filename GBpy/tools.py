@@ -60,7 +60,7 @@ class Col(object):
             a = self.amber
         else:
             raise Exception('The color you selected is not acceptable')
-        print a + text + self.ENDC
+        print(a + text + self.ENDC)
 # -----------------------------------------------------------------------------------------------------------
 
 
@@ -213,7 +213,7 @@ def message_display(CheckMatrix, Checknumber, Message, Precis):
     in case the matrix passed to it is not integral.`
     """
     cond = int_man.int_check(CheckMatrix, Precis)
-    print Checknumber, '.', Message, '-> ',
+    print(Checknumber, '.', Message, '-> ',)
     txt = Col()
     if cond.all():
         txt.c_prnt('YES', 'yel')
@@ -912,7 +912,7 @@ def test_unique_rows():
     prec = 1.e-5
     mat = np.array([[-1e-6, 1, 1], [1e-7, 1, 1], [0, 1, 1], [1, 1, 1]])
     c, ia, ic = unique_rows_tol(mat, prec, True, True)
-    print unique_rows_tol(mat, prec, True, True)
+    print(unique_rows_tol(mat, prec, True, True))
 # -----------------------------------------------------------------------------------------------------------
 
 
@@ -933,6 +933,6 @@ def test_lll_reduction():
             # a, H = lll_reduction_3by2(Mat['Matrix'][i])
             b = lll_reduction(Mat[j][i])
             # print Mat['Matrix'][i], '\n reduced: \n', H, '\n-------\n'
-            print '\n______________________________________________\n'
-            print Mat[j][i], '\n reduced: \n', b, '\n-------\n'
+            print('\n______________________________________________\n')
+            print(Mat[j][i], '\n reduced: \n', b, '\n-------\n')
 # -----------------------------------------------------------------------------------------------------------

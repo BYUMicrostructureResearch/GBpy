@@ -7,7 +7,7 @@
 
 
 import numpy as np
-from fractions import gcd
+from math import gcd
 from fractions import Fraction
 # -----------------------------------------------------------------------------------------------------------
 
